@@ -7,16 +7,17 @@
   </div>
 </div>
   <h2>Jobs</h2>
-{% show_jobs(jobs) %}
+{{ show_jobs(jobs) }}
   <h2>Reviews</h2>
       {% for review in reviews %}
     <div class="box">
       <article class="media">
         <div class="media-left">
-          <p> <strong>{{ show_job(title) }}</strong><br>
-            <small>{{ show_job(status) }}</small><br>
-            <date>{{ show_job(date) }}</date><br>
-            {{ show_job(status) }}
+          <p>
+            <strong>{{ review['title'] }}</strong>
+            <small>{{ review['status'] }}</small>
+            <small>{{ review['date'] }}</small>
+            {{ review['review'] }}
           </p>
         </div>
         <div class="media-content">
